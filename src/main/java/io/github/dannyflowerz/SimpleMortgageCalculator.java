@@ -6,7 +6,7 @@ package io.github.dannyflowerz;
  */
 public class SimpleMortgageCalculator {
     public double calculateMortgage(Income income) {
-        int combinedIncome = income.getLoanerIncome() + income.getPartnerIncome();
+        int combinedIncome = income.getLoaneeIncome() + income.getPartnerIncome();
         if (combinedIncome < 20000.0) throw new TooLowIncomeException();
         if (combinedIncome >= 20000 && combinedIncome < 30000) return 3.5 * combinedIncome;
         if (combinedIncome >= 30000 && combinedIncome < 60000) return 4.4 * combinedIncome;
